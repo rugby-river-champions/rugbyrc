@@ -1,0 +1,173 @@
+#' The application User-Interface
+#'
+#' @param request Internal parameter for `{shiny}`.
+#'     DO NOT REMOVE.
+#' @import shiny
+#' @import bslib
+#' @importFrom bslib accordion accordion_panel
+#' @noRd
+app_ui <- function(request) {
+  tagList(
+    # Leave this function for adding external resources
+    golem_add_external_resources(),
+    shinyjs::useShinyjs(),
+    # Your application UI logic
+    fluidPage(
+      theme = bs_theme(version = 5, bootswatch = "lumen"),
+      tags$head(
+        HTML("<html lang='en'>"),
+        # Css stylesheet
+        tags$link(
+          rel = "stylesheet",
+          type = "text/css",
+          href = "custom.css"
+        )
+      ),
+      titlePanel(
+        div(
+          class = "title-panel",
+          # Left side: larger logo.png image and text
+          div(
+            class = "logo-container",
+            img(
+              src = "www/images/logo.png",
+              class = "logo",
+              alt = "The logo of the Birmingham River Champions citizen science initiative"
+            ),
+            div(
+              class = "text-container",
+              HTML(
+                "<div>Monitor <span>your</span> river</div>
+                <div>Protect <span>your</span> river</div>
+                <div>Love <span>your</span> river</div>"
+              )
+            )
+          ),
+          # Right side: Smaller footer images, with EA logo slightly bigger
+          div(
+            img(
+              src = "www/images/UoB logo.png",
+              class = "UOB-logo",
+              alt = "The logo of the University of Birmingham",
+            ),
+            img(
+              src = "www/images/BLOSSOM logo.png",
+              class = "BLOSSOM-logo",
+              alt = "The logo of the University of Birmingham",
+            )
+          )
+        )
+      ),
+      tabsetPanel(
+        id = "panels",
+        tabPanel(
+          "Project Overview",
+          mod_01_welcome_ui("01_welcome_1"),
+          div(
+            class = "project-overview-images", # Grid for images
+            div(
+              class = 'img-container',
+              img(
+                src = 'www/images/Main page photo 1 - Trittiford inspecting tray.jpg',
+                alt = "A photograph of volunteers at an Urban Riverfly training course"
+              )
+            ),
+            div(
+              class = 'img-container',
+              img(
+                src = 'www/images/Main page photo 2 - Come to campus event.jpg',
+                alt = "A photograph of an Urban Riverfly trainer demonstrating techniques to volunteers"
+              )
+            ),
+            div(
+              class = 'img-container',
+              img(
+                src = 'www/images/Main page photo 3 - Kick sample.jpg',
+                alt = "A group of Birmingham River Champions volunteers collecting Urban Riverfly samples"
+              )
+            ),
+            div(
+              class = 'img-container',
+              img(
+                src = 'www/images/Main page photo 4 - Freshwater Watch sample.jpeg',
+                alt = "A photograph of volunteers holding their Urban Riverfly certification after receiving training"
+              )
+            )
+          ),
+          align = "left",
+          class = "welcome-text"
+        ),
+        # tabPanel(
+        #   "Blossom",
+        #   mod_07_blossom_ui("07_blossom_1")
+        # ),
+        # tabPanel(
+        #   "Information / resources",
+        #   mod_04_information_ui("04_information_1")
+        # ),
+        # tabPanel(
+        #   "Newsletters / reports",
+        #   mod_06_newsletters_ui("06_newsletters_1")
+        # ),
+        tabPanel(
+          "Map Data",
+          mod_03_plot_data_ui("03_plot_data_1")
+        ),
+        tabPanel(
+          "Tabulated Data",
+          h3("Submitted Entries"),
+          mod_05_show_data_ui("05_show_data_1"),
+        ),
+        tabPanel(
+          value = "submission_form",
+          title = "Submit Data",
+          mod_02_data_input_ui("02_data_input_1")
+        )
+      ),
+      div(
+        HTML(
+          "Web app by <a href='https://www.birmingham.ac.uk/staff/profiles/gees/white-james'>J.C. White</a>,
+          <a href='https://www.linkedin.com/in/charlotte-rush-773919216/'>C. Rush</a>, and the
+          <a href='https://www.birmingham.ac.uk/research/arc/rsg/bear-software'>Research Software Group</a> at the
+          <a href = 'https://www.birmingham.ac.uk/'>University of Birmingham.</a>"
+        ),
+        align = "right",
+        class = "welcome-text"
+      ),
+      bslib::accordion(
+        id = "acc",
+        bslib::accordion_panel(
+          title = "Accessibility statement",
+          id = "accessibility",
+          includeMarkdown(app_sys("app/www/text/Accessibility.md"))
+        ),
+        open = FALSE
+      )
+    )
+  )
+}
+
+#' Add external Resources to the Application
+#'
+#' This function is internally used to add external
+#' resources inside the Shiny application.
+#'
+#' @import shiny
+#' @importFrom golem add_resource_path activate_js favicon bundle_resources
+#' @noRd
+golem_add_external_resources <- function() {
+  add_resource_path(
+    "www",
+    app_sys("app/www")
+  )
+
+  tags$head(
+    favicon(),
+    bundle_resources(
+      path = app_sys("app/www"),
+      app_title = "Birmingham River Champions"
+    )
+    # Add here other external resources
+    # for example, you can add shinyalert::useShinyalert()
+  )
+}

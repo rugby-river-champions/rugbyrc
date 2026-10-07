@@ -1,0 +1,49 @@
+Package: bhamrc
+Title: Birmingham River Champions
+Version: 0.0.0.9000
+Authors@R: c(
+    person("James", "White", , "j.c.white.1@bham.ac.uk", role = c("aut", "cre")),
+    person("Christine", "Stawitz", , "c.c.stawitz@bham.ac.uk", role = "aut"),
+    person("Charlotte", "Rush", role = "aut")
+  )
+Description: Birmingham River Champions is a package containing a Shiny application
+  that allows users to upload and view citizen science data. These data include
+  observations of insects, invasive species, water quality, and outfall
+  from Birmingham waterways.
+License: MIT + file LICENSE
+Imports: 
+    bslib,
+    config,
+    DBI,
+    dplyr,
+    DT,
+    ggplot2,
+    golem,
+    googlesheets4,
+    hms,
+    htmlwidgets,
+    leaflet,
+    leafpop,
+    lubridate,
+    markdown,
+    purrr,
+    pkgload,
+    devtools,
+    RColorBrewer,
+    RSQLite,
+    sf,
+    shiny,
+    shinyjs,
+    stringr,
+    tidyr,
+    writexl,
+    yaml
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
+Depends: 
+    R (>= 4.1)
+Config/roxygen2/version: 8.1.0

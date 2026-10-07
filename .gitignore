@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.httr-oauth
+.secrets
+.DS_Store
+.quarto
+.secrets
+*.tiff
+*.sr.lock
+*.vscode
+*.json
+*.dcf
+.radian_profile
+data.sqlite
+.secrets
