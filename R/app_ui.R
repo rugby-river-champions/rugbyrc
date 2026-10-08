@@ -54,6 +54,11 @@ app_ui <- function(request) {
               src = "www/images/BLOSSOM logo.png",
               class = "BLOSSOM-logo",
               alt = "The logo of the University of Birmingham",
+            ),
+            img(
+              src = "www/images/RBC Logo.png",
+              class = "BLOSSOM-logo",
+              alt = "The logo of the University of Birmingham",
             )
           )
         )
@@ -68,29 +73,29 @@ app_ui <- function(request) {
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Main page photo 1 - Trittiford inspecting tray.jpg',
-                alt = "A photograph of volunteers at an Urban Riverfly training course"
+                src = 'www/images/Homepage Image (1).JPEG',
+                alt = "A photograph of a volunteer measurement instructions"
               )
             ),
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Main page photo 2 - Come to campus event.jpg',
-                alt = "A photograph of an Urban Riverfly trainer demonstrating techniques to volunteers"
+                src = 'www/images/Homepage Image (2).JPEG',
+                alt = "Volunteers walking in a field"
               )
             ),
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Main page photo 3 - Kick sample.jpg',
-                alt = "A group of Rugby River Champions volunteers collecting Urban Riverfly samples"
+                src = 'www/images/Homepage Image (3).JPEG',
+                alt = "Volunteers examining samples"
               )
             ),
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Main page photo 4 - Freshwater Watch sample.jpeg',
-                alt = "A photograph of volunteers holding their Urban Riverfly certification after receiving training"
+                src = 'www/images/Homepage Image (4).jpg',
+                alt = "Volunteers stood in a field"
               )
             )
           ),
