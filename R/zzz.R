@@ -1,10 +1,10 @@
 .onLoad <- function(libname, pkgname) {
-    options(bhamrc.dbname = "data.sqlite")
+    options(rugbyrc.dbname = "data.sqlite")
 
     path <- system.file(
         "extdata",
         "birminghamriverchampions-db5399f61d80.json",
-        package = "bhamrc"
+        package = "rugbyrc"
     )
 
     googlesheets4::gs4_auth(
@@ -12,7 +12,7 @@
     )
 
     if (!nzchar(path)) {
-        stop("Could not locate 'bhamrc' package or its extdata folder")
+        stop("Could not locate 'rugbyrc' package or its extdata folder")
     } else if (!file.exists(path)) {
         stop("Package found, but the credentials file is missing: ", path)
     } else {

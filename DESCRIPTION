@@ -1,15 +1,15 @@
-Package: bhamrc
-Title: Birmingham River Champions
+Package: rugbyrc
+Title: Rugby River Champions
 Version: 0.0.0.9000
 Authors@R: c(
     person("James", "White", , "j.c.white.1@bham.ac.uk", role = c("aut", "cre")),
     person("Christine", "Stawitz", , "c.c.stawitz@bham.ac.uk", role = "aut"),
     person("Charlotte", "Rush", role = "aut")
   )
-Description: Birmingham River Champions is a package containing a Shiny application
+Description: Rugby River Champions is a package containing a Shiny application
   that allows users to upload and view citizen science data. These data include
   observations of insects, invasive species, water quality, and outfall
-  from Birmingham waterways.
+  from Rugby waterways.
 License: MIT + file LICENSE
 Imports: 
     bslib,

@@ -19,12 +19,12 @@
 ## to change the name in the app_sys() function in app_config.R /!\
 ##
 golem::fill_desc(
-  pkg_name = "bhamrc", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
-  pkg_title = "Birmingham River Champions", # What the Package Does (One Line, Title Case, No Period)
-  pkg_description = "Birmingham River Champions is a package containing a Shiny application
+  pkg_name = "rugbyrc", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
+  pkg_title = "Rugby River Champions", # What the Package Does (One Line, Title Case, No Period)
+  pkg_description = "Rugby River Champions is a package containing a Shiny application
   that allows users to upload and view citizen science data. These data include
   observations of insects, invasive species, water quality, and outfall
-  from Birmingham waterways.", # What the package does (one paragraph).
+  from Rugby waterways.", # What the package does (one paragraph).
   authors = c(
     person(
       given = "James", # Your First Name

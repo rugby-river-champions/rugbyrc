@@ -32,7 +32,7 @@ app_ui <- function(request) {
             img(
               src = "www/images/logo.png",
               class = "logo",
-              alt = "The logo of the Birmingham River Champions citizen science initiative"
+              alt = "The logo of the Rugby River Champions citizen science initiative"
             ),
             div(
               class = "text-container",
@@ -83,7 +83,7 @@ app_ui <- function(request) {
               class = 'img-container',
               img(
                 src = 'www/images/Main page photo 3 - Kick sample.jpg',
-                alt = "A group of Birmingham River Champions volunteers collecting Urban Riverfly samples"
+                alt = "A group of Rugby River Champions volunteers collecting Urban Riverfly samples"
               )
             ),
             div(
@@ -165,7 +165,7 @@ golem_add_external_resources <- function() {
     favicon(),
     bundle_resources(
       path = app_sys("app/www"),
-      app_title = "Birmingham River Champions"
+      app_title = "Rugby River Champions"
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()

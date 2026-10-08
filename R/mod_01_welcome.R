@@ -15,7 +15,7 @@ mod_01_welcome_ui <- function(id) {
         list(
           includeMarkdown(app_sys("app/www/text/welcome.md")),
           HTML(
-            "Please email <b> birminghamriverchampions@gmail.com </b> if you have any questions 
+            "Please email <b> rugbyriverchampions@gmail.com </b> if you have any questions 
     or would like more information on any aspects of the project"
           )
         ),

@@ -60,7 +60,7 @@ usethis::use_test("app")
 devtools::document()
 
 ## Vignette ----
-usethis::use_vignette("bhamrc")
+usethis::use_vignette("rugbyrc")
 devtools::build_vignettes()
 
 ## Code Coverage----

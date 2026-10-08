@@ -9,7 +9,7 @@
 * Get on GitHub
 
 ## Todo
-<emph> Now tracked on GitHub project [board](https://github.com/orgs/Birmingham-River-Champions/projects/1) </emph>
+<emph> Now tracked on GitHub project [board](https://github.com/orgs/Rugby-River-Champions/projects/1) </emph>
 * Recreate `leaflet` plots
 * Make form accept user inputs in the correct way
 * Check accessibility

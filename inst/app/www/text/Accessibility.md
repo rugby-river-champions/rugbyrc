@@ -1,6 +1,6 @@
 ## Accessibility Statement
     
-This statement applies to this website ([birminghamriverchampions.shinyapps.io](https://birminghamriverchampions.shinyapps.io/BirminghamRiverChampions/))
+This statement applies to this website ([rugbyriverchampions.shinyapps.io](https://rugbyriverchampions.shinyapps.io/RugbyRiverChampions/))
 
 The website was improved by the [Research Software Group](https://www.birmingham.ac.uk/bear-software) at the [University of Birmingham](https://www.birmingham.ac.uk/). We are committed to improving accessibility and are actively working to enhance the user experience for everyone. 
 

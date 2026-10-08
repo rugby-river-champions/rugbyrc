@@ -1,5 +1,5 @@
-<b> Birmingham River Champions (BRC) </b> is a citizen science project led by the University of Birmingham, partnered by the Environment Agency,
-    Birmingham and Black Country Wildlife Trust and Severn Trent's river ranger team. We are connecting with volunteer groups 
+<b> Rugby River Champions (BRC) </b> is a citizen science project led by the University of Rugby, partnered by the Environment Agency,
+    Rugby and Black Country Wildlife Trust and Severn Trent's river ranger team. We are connecting with volunteer groups 
     delivering <b> fantastic conservation </b> work across the West Midlands. BRC allows volunteers to monitor our vulnerable
     rivers by providing training and equipment. We want our <b> ‘river champions’ </b> to see the value in their results and aim to 
     communicate this back to the volunteers. We <b>value</b> the time of our river champion volunteers, so have picked <b>4 quick</b> techniques:

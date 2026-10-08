@@ -2,7 +2,7 @@
 
 You can add a new newsletter to this website using the online github editor. The instructions below will take you through the process.
 
-1. Go to the [River Champions code repository](https://github.com/Birmingham-River-Champions/bhamrc) on Github. Make sure you are logged into your github account and that account has permissions to edit the code.
+1. Go to the [River Champions code repository](https://github.com/Rugby-River-Champions/rugbyrc) on Github. Make sure you are logged into your github account and that account has permissions to edit the code.
 
 ![Github page](Fig1.png)
 

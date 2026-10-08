@@ -224,7 +224,7 @@ survey_questions <- list(
     nitrate_ppm = "Nitrate (ppm)",
     turbidity_NTU = "Turbidity (NTU)",
     other_water_quality = "Other comments (e.g., field conditions, sampling kit errors)",
-    other_urban_riverfly = "Other comments (e.g., field conditions - images of unidentifiable species should be emailed to birminghamriverchampions@gmail.com)",
+    other_urban_riverfly = "Other comments (e.g., field conditions - images of unidentifiable species should be emailed rugbyriverchampions@gmail.com)",
     invasive_spp_wtw = "What.three.words location of invasive species seen 'out and about' - (separate with period - e.g., \"above.awake.nature\") If you don't have the app, go to what3words.com, and select the geolocate button (you may have to allow your location to be identified). Click on other nearby squares if the GPS isn't accurate enough.",
     killer_demon_shrimp = "Number of killer / demon shrimp counted in a kick sample - leave blank if 0",
     signal_crayfish = "Number of signal crayfish counted in a kick sample / observed on riverbed - leave blank if 0",
@@ -237,7 +237,7 @@ survey_questions <- list(
     himalayan_balsam = "Himalayan balsam prevalence over a 10-metre cross-section (approx. 10 strides) - leave blank if not observed",
     japanese_knotweed = "Japanese knotweed prevalence over a 10-metre cross-section (approx. 10 strides) - leave blank if not observed",
     giant_hogweed = "Giant hogweed prevalence over a 10-metre cross-section (approx. 10 strides) - leave blank if not observed",
-    any_other_invasive_spp = "Note any invasive species or comments here (images of unidentifiable species should be emailed to birminghamriverchampions@gmail.com)",
+    any_other_invasive_spp = "Note any invasive species or comments here (images of unidentifiable species should be emailed to rugbyriverchampions@gmail.com)",
     outfall_location_wtw = "Outfall location - What.three.words (separate with period - e.g., \"above.awake.nature\"). If you don't have the app, go to what3words.com, and select the geolocate button (you may have to allow your location to be identified).
      Click on other nearby squares if the GPS isn't accurate enough.",
     other_unspecified_1 = "Additional taxa not in Urban Riverfly. If 'other taxa', please specify the name and abundance below.",

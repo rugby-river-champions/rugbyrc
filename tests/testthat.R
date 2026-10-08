@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(bhamrc)
+library(rugbyrc)
 
-test_check("bhamrc")
+test_check("rugbyrc")

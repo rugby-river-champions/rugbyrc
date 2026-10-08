@@ -532,7 +532,7 @@ mod_data_entry_form_server <- function(id, table_name) {
                 tags$p("Congratulations! Your form has been submitted."),
                 br(),
                 tags$p(
-                    "Click on the 'Tabulated Data' tab to see your submitted data. Please email birminghamriverchampions@gmail.com with any data-related issues."
+                    "Click on the 'Tabulated Data' tab to see your submitted data. Please email rugbyriverchampions@gmail.com with any data-related issues."
                 )
             ))
         })
@@ -690,7 +690,7 @@ mod_data_entry_form_server <- function(id, table_name) {
                 shiny::showNotification(
                     "You have entered a value which we suspect may be an anomalous value.
                     If you are confident this is correct, please proceed with the submission
-                    by leaving blank for now and email birminghamriverchampions@gmail.com.
+                    by leaving blank for now and email rugbyriverchampions@gmail.com.
                     If  your conductivity meter says mS you can simply multiply your value by 1000",
                     type = "warning"
                 )
@@ -873,9 +873,9 @@ mod_data_entry_form_server <- function(id, table_name) {
 
                     shiny::showNotification(
                         HTML(paste0(
-                            "You have successfully submitted your data to the Birmingham River Champions project, thank you for your contribution.<br><br>",
+                            "You have successfully submitted your data to the Rugby River Champions project, thank you for your contribution.<br><br>",
                             "If you refresh the page you will be able to see this data entry within Map Data and Tabulated Data tabs.<br><br>",
-                            "For any queries or comments regarding your data submission, please email birminghamriverchampions@gmail.com"
+                            "For any queries or comments regarding your data submission, please email rugbyriverchampions@gmail.com"
                         )),
                         type = "message",
                         duration = 5
