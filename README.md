@@ -28,7 +28,7 @@ library(bhamrc)
 3. You can launch the application by running:
 
 ```r
-bhamrc::run_app()
+rugbyrc::run_app()
 ```
 4. The app will create a `data.sqlite` file in the project directory for local data storage.
 
