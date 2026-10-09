@@ -110,10 +110,10 @@ app_ui <- function(request) {
           "Information / resources",
           mod_04_information_ui("04_information_1")
         ),
-        # tabPanel(
-        #   "Newsletters / reports",
-        #   mod_06_newsletters_ui("06_newsletters_1")
-        # ),
+        tabPanel(
+          "Newsletters / reports",
+          mod_06_newsletters_ui("06_newsletters_1")
+        ),
         tabPanel(
           "Map Data",
           mod_03_plot_data_ui("03_plot_data_1")
