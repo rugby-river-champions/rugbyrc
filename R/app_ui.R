@@ -30,7 +30,7 @@ app_ui <- function(request) {
           div(
             class = "logo-container",
             img(
-              src = "www/images/logo.png",
+              src = "www/images/Full.png",
               class = "logo",
               alt = "The logo of the Rugby River Champions citizen science initiative"
             ),
@@ -48,11 +48,6 @@ app_ui <- function(request) {
             img(
               src = "www/images/UoB logo.png",
               class = "UOB-logo",
-              alt = "The logo of the University of Birmingham",
-            ),
-            img(
-              src = "www/images/BLOSSOM logo.png",
-              class = "BLOSSOM-logo",
               alt = "The logo of the University of Birmingham",
             ),
             img(
@@ -87,14 +82,14 @@ app_ui <- function(request) {
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Homepage Image (3).JPEG',
+                src = 'www/images/Homepage Image NEW 1.png',
                 alt = "Volunteers examining samples"
               )
             ),
             div(
               class = 'img-container',
               img(
-                src = 'www/images/Homepage Image (4).jpg',
+                src = 'www/images/Homepage Image NEW 2.jpg',
                 alt = "Volunteers stood in a field"
               )
             )
