@@ -5,11 +5,11 @@
 #' @importFrom sf st_read st_transform st_zm
 addPolygonsAndLines <- function(mapProxy, zoomLevel) {
     Tame_shapefile <- sf::st_read(
-        "./inst/extdata/Upper_Tame_Wbs_Complete_SubCtchmnts_Dsslvd.shp"
+        "./inst/extdata/District__Metropolitan_district__Unitary_authority___OS_Boundary_Line.shp"
     ) |>
         sf::st_transform(crs = 4326)
     Tame_river_shapefile <- sf::st_read(
-        "./inst/extdata/Tame_OS_WatercourseLink.shp"
+        "./inst/extdata/OverlayedFeatures.shp"
     ) |>
         sf::st_zm(Tame_river_shapefile) |>
         sf::st_transform(crs = 4326)
@@ -26,7 +26,7 @@ addPolygonsAndLines <- function(mapProxy, zoomLevel) {
                     weight = 2,
                     opacity = 1,
                     fillOpacity = 0.3,
-                    label = ~JWSb_ctmnt,
+                    # label = ~JWSb_ctmnt,
                     highlightOptions = highlightOptions(
                         weight = 6,
                         color = "blue",

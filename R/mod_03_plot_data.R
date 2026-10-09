@@ -149,7 +149,7 @@ mod_03_plot_data_server <- function(id) {
       }"
         ) |>
         addProviderTiles(providers$OpenStreetMap) |>
-        setView(lng = -1.83, lat = 52.45, zoom = 10) |>
+        setView(lng = -1.265332, lat = 52.370576, zoom = 10) |>
         addPolygonsAndLines(zoomLevel = 10) # Add polygons and lines at initial zoom level
     })
     # Reactive expressions to capture user selections
