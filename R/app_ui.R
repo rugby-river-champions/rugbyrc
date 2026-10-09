@@ -106,10 +106,10 @@ app_ui <- function(request) {
         #   "Blossom",
         #   mod_07_blossom_ui("07_blossom_1")
         # ),
-        # tabPanel(
-        #   "Information / resources",
-        #   mod_04_information_ui("04_information_1")
-        # ),
+        tabPanel(
+          "Information / resources",
+          mod_04_information_ui("04_information_1")
+        ),
         # tabPanel(
         #   "Newsletters / reports",
         #   mod_06_newsletters_ui("06_newsletters_1")
