@@ -327,6 +327,6 @@ google_sheet_id <- URL
 new_sheet_id <- URL
 
 # Create location data frames for the two different location tables
-sampling_locations_url <- 'https://docs.google.com/spreadsheets/d/1ZEkLC3HBkB8SJynA3pHtmntMOiCT8p4e2BFNYsMUR4c/edit?usp=sharing'
+sampling_locations_url <- 'https://docs.google.com/spreadsheets/d/1v5iGa3RDcjGYyJOudd7LP1drYArU9Lj20OHR9yheD88/edit?usp=sharing'
 
 outfall_locations_url <- 'https://docs.google.com/spreadsheets/d/1JJ8bPWppVKbmCfllIevrVmt_dcoswOim7Cos418Ot6w/edit?gid=0#gid=0'
