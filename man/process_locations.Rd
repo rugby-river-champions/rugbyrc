@@ -6,7 +6,7 @@
 \usage{
 process_locations(
   sampling_locs_url =
-    "https://docs.google.com/spreadsheets/d/1ZEkLC3HBkB8SJynA3pHtmntMOiCT8p4e2BFNYsMUR4c/edit?usp=sharing",
+    "https://docs.google.com/spreadsheets/d/1Cs4c3QohfB60l0Dp4sHZHr-FRwCLqIJqUkN1ZyOYjy4/edit?usp=sharing",
   outfall_locs_url =
     "https://docs.google.com/spreadsheets/d/1JJ8bPWppVKbmCfllIevrVmt_dcoswOim7Cos418Ot6w/edit?gid=0#gid=0"
 )
