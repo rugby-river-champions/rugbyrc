@@ -98,7 +98,6 @@ jobs:
               "app.R"
             ),
             appId = app_id,
-            dependencyResolution = "library",
             lint = FALSE,
             forceUpdate = TRUE
           )
