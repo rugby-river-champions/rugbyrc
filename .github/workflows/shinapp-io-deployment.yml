@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v6
@@ -16,18 +16,15 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev cmake gdal-bin libabsl-dev libfontconfig1-dev libfreetype6-dev libgit2-dev pandoc libharfbuzz-dev libfribidi-dev
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev cmake gdal-bin libabsl-dev libfontconfig1-dev libfreetype6-dev libgit2-dev pandoc
 
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.6.1'
 
       - name: Install terra
-        env:
-          RSPM: https://packagemanager.posit.co/cran/__linux__/noble/latest
         run: |
-          install.packages("terra", repos = Sys.getenv("RSPM"))
-        shell: Rscript {0}
+          Rscript -e 'install.packages("terra", repos="https://cloud.r-project.org")'
 
       - name: Install renv
         run: install.packages("renv")
@@ -55,31 +52,12 @@ jobs:
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           DEPLOY_URL: ${{ github.ref == 'refs/heads/main' && secrets.MAIN_URL || secrets.DEV_URL }}
 
-      # Install deployment-only packages outside the project library, so they do not
-      # make the restored project library differ from renv.lock.
-      - name: Install deployment tools
-        env:
-          R_TOOLS_LIB: ${{ runner.temp }}/r-tools
-        run: |
-          dir.create(Sys.getenv("R_TOOLS_LIB"), recursive = TRUE, showWarnings = FALSE)
-          install.packages(c("rsconnect", "desc"), lib = Sys.getenv("R_TOOLS_LIB"))
-        shell: Rscript {0}
-
-      - name: Install deployment tools to r-tools-library
-        env:
-          R_TOOLS_LIB: ${{ runner.temp }}/r-tools-library
-        run: |
-          dir.create(Sys.getenv("R_TOOLS_LIB"), recursive = TRUE, showWarnings = FALSE)
-          install.packages(
-            c("rsconnect", "desc"),
-            lib = Sys.getenv("R_TOOLS_LIB"),
-            repos = "https://packagemanager.posit.co/cran/__linux__/noble/latest"
-          )
+      - name: Install rsconnect requirements
+        run: install.packages(c("rsconnect", "desc"))
         shell: Rscript {0}
 
       - name: Deploy to shinyapps.io
         env:
-          R_TOOLS_LIB: ${{ runner.temp }}/r-tools-library
           SHINYAPPS_NAME: ${{ github.ref == 'refs/heads/main' && secrets.MAIN_SHINYAPPS_NAME || secrets.DEV_SHINYAPPS_NAME }}
           SHINYAPPS_TOKEN: ${{ github.ref == 'refs/heads/main' && secrets.MAIN_SHINYAPPS_TOKEN || secrets.DEV_SHINYAPPS_TOKEN }}
           SHINYAPPS_SECRET: ${{ github.ref == 'refs/heads/main' && secrets.MAIN_SHINYAPPS_SECRET || secrets.DEV_SHINYAPPS_SECRET }}
@@ -87,13 +65,6 @@ jobs:
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           DEPLOY_URL: ${{ github.ref == 'refs/heads/main' && secrets.MAIN_URL || secrets.DEV_URL }}
         run: |
-          .libPaths(c(Sys.getenv("R_TOOLS_LIB"), .libPaths()))
-
-          stopifnot(
-            requireNamespace("rsconnect", quietly = TRUE),
-            requireNamespace("desc", quietly = TRUE)
-          )
-
           rsconnect::setAccountInfo(
             name = Sys.getenv("SHINYAPPS_NAME"),
             token = Sys.getenv("SHINYAPPS_TOKEN"),
